@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Konoha</title>
     <style>
-
+        main {
+            display: flex;
+            gap: 10%;
+        }
         header{
             height: 240px;
             width: 100%;
+            margin: 0;
+            padding: 0;
             background-color: rgb(165, 42, 42);
             display: flex;
             text-align: center;
@@ -38,8 +43,45 @@
             width: 225px;
             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMKP4ZwJkjC9aeYvc1ontDojKNoyGdcYL4Ng&s");
             border-radius: 50%;
-            margin-left: 10%;
+            margin-left: 20%;
         }
+        .pergaminho{
+            height: 300px;
+            width: 535px;
+            background-image: url('https://tse2.mm.bing.net/th/id/OIP.FyhnbeTOLKLuYtAbh4ITgQHaHJ?rs=1&pid=ImgDetMain&o=7&rm=3');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: contain;
+        }
+        .texto{
+            text-align: center;
+        }
+                .sobrenos {
+            height: 30%;
+            width: 30%;
+            margin-left: 8%;
+            overflow-wrap: break-word;
+        }
+        
+        .detetives {
+ width: 30%;
+    padding: 20px;
+
+    background-image: url('https://www.nicepng.com/png/full/419-4199514_alterar-exibio-de-spoiler-para-tipo-pergaminho-naruto.png');
+    background-repeat: no-repeat;
+    background-size: 100%  
+      }
+        
+        .casos {
+            height: 30%;
+            width: 30%;
+            overflow-wrap: break-word;
+        }
+        .corte {
+            width: 300px;
+            height: 200px; 
+            overflow: hidden;
+            }
     </style>
 </head>
 <body>
@@ -52,70 +94,78 @@
     </header>
 
      <main>
-
+        <div class="sobrenos">
         <details>
             <summary><h2>Sobre Nós</h2></summary>
                 <p>Somos uma agência de detetives de konoha especializados em investigações discretas e soluções eficientes para seus problemas. Oferecemos serviços personalizados para cada caso.</p>
         </details>
-
+        </div>
+        <div class="detetives">
             <details>
                 <summary><h2>Detetives</h2></summary>
-
-<details>
-                <summary>Detetive 1°</summary><li><h4>Hashirama Senju</h4></li>
+                <details>
+                <summary>Detetive 1°</summary><h4>Hashirama Senju</h4>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4F7gt_m7p325a36wIvh3G7VNLzrmN66ybZc7qvBveLMIgFy3oKJ6lNjj6uk7i7xjCxIexTTaxO2aqlmLJibAefJvxMtLIf4NuRpLo9CvAQ&s=10">
                 <p>Especializado em resolver casos complexos com empatia e inteligência. Usando sua habilidade de controlar madeira (Mokuton), ele captura pistas e impede fugas. Sempre calmo e estratégico, busca a verdade e restaura a paz com eficiência.</p>
                 </details>
 
                 <details>
-                <summary>Detetive 2°</summary><li><h4>Tobirama Senju</h4></li>
+                <summary>Detetive 2°</summary><h4>Tobirama Senju</h4>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGchk3sG6D-x_hV0hwIurovmg3DwrFz8aZCO1EGf53uYbIOCAhPRbIudIQ1ZtLqIyBeELQVYlFldZJR_El-3euw45mFavpdPfFr3o_d01IAw&s=10">
                 <p>Com uma mente estratégica e uma abordagem direta, ele resolve casos com precisão e rapidez. Sua habilidade de análise aguçada e sua expertise em táticas fazem dele o melhor em desmascarar mentiras e descobrir a verdade. Se a situação exige ação rápida e decisões certeiras, Tobirama é o profissional que você quer.</p>
                 </details>
 
                 <details>
-                <summary>Detetive 3°</summary><li><h4>Hiruzen Sarutobi</h4></li>
+                <summary>Detetive 3°</summary><h4>Hiruzen Sarutobi</h4>
                 <img src="https://static.wikia.nocookie.net/dublagem/images/e/e4/Hiruzen_Sarutobi.png/revision/latest/thumbnail/width/360/height/360?cb=20210629181453&path-prefix=pt-br">
                 <p>Experiente, observador e estrategista, ele analisa cada detalhe antes de agir, sempre um passo à frente dos outros. Na agência, é conhecido por resolver casos que parecem impossíveis, usando inteligência, calma e uma leitura quase perfeita das pessoas. Onde há mistério, ele encontra a verdade.</p>
                 </details>
 
                 <details>
-                <summary>Detetive 4°</summary><li><h4>Minato Namizake</h4></li>
+                <summary>Detetive 4°</summary><h4>Minato Namizake</h4>
                 <img src="https://static.wikia.nocookie.net/dublagem/images/8/8d/Minato_Namikaze_%28Shippuden%29.png/revision/latest/thumbnail/width/360/height/360?cb=20241120180700&path-prefix=pt-br">
                 <p>Conhecido por sua mente brilhante e reflexos quase instantâneos, ele resolve casos antes mesmo que outros entendam o problema. Frio, estratégico e extremamente eficiente, Minato combina inteligência com ação, chegando sempre primeiro — e saindo com a solução.</p>
                 </details>
 
                 <details>
-                <summary>Detetive 5°</summary><li><h4>Tsunade Senju</h4></li>
+                <summary>Detetive 5°</summary><h4>Tsunade Senju</h4>
                 <img src="https://static.wikia.nocookie.net/beautybydaysi/images/4/47/Tsunade_%28Naruto%29.png/revision/latest/thumbnail/width/360/height/360?cb=20220926111953">
                 <p>Direta e nada paciente com erros, ela resolve casos com inteligência prática e uma leitura precisa das situações. Na agência, é conhecida por encarar qualquer problema de frente — e sair com a resposta, custe o que custar.</p>
                 </details>
 
                 <details>
-                <summary>Detetive 6°</summary><li><h4>Kakashi Hatake</h4></li>
+                <summary>Detetive 6°</summary><h4>Kakashi Hatake</h4>
                 <img src="https://static.wikia.nocookie.net/dublagem/images/6/63/Kakashi_Hatake_%28NS%29.png/revision/latest/scale-to-width/360?cb=20250323145936&path-prefix=pt-br">
                 <p>Sempre calmo e aparentemente despreocupado, ele observa tudo ao redor com atenção extrema. Especialista em analisar padrões e antecipar movimentos, resolve casos com inteligência silenciosa — quando percebe, ele já descobriu tudo antes de qualquer um.</p>
                 </details>
 
                 <details>
-                <summary>Detetive 7°</summary><li><h4>Naruto Uzumaki</h4></li>
+                <summary>Detetive 7°</summary><h4>Naruto Uzumaki</h4>
                 <img src="https://static.wikia.nocookie.net/narutofanon/images/c/c9/Naruto_Uzumaki_2.jpg/revision/latest/thumbnail/width/360/height/360?cb=20210226154514&path-prefix=pt-br">
                 <p>Pode não seguir métodos tradicionais, mas sua determinação e intuição fazem ele resolver casos que ninguém mais consegue. Persistente e cheio de energia, Naruto nunca desiste — e sempre encontra um jeito de chegar à verdade, mesmo pelos caminhos mais inesperados.</p>
                 </details>
 
                 <details>
-                <summary>Detetive 8°</summary><li><h4>Shikamaru Nara</h4></li>
+                <summary>Detetive 8°</summary><h4>Shikamaru Nara</h4>
                 <img src="https://cdn.myanimelist.net/r/360x360/images/characters/3/131315.jpg?s=9530d6913654a21fbe84c2b657750b61">
                 <p>Mesmo achando tudo “problemático”, sua inteligência fora do comum permite prever cada passo dos casos com precisão absurda. Preguiçoso na aparência, mas brilhante na prática, ele resolve mistérios com estratégia pura — antes que alguém perceba o que está acontecendo.</p>
                 </details>
         </details>
+        </div>
+        <div class="casos">
         <details>
             
             <summary><h2>Casos</h2></summary>
 
         <details>
             <summary><b>1° Ataque da raposa de nove caudas</b></summary>
-                <p>Esse incidente ocorreu sobre um invasor que soltou a raposa causando devastação na vila e matando 4° Hokage</p>
+                <div class="pergaminho">
+                    <br><br><br><br>
+                <p class="texto">Esse incidente ocorreu sobre um invasor, </p>
+                <p class="texto">que soltou a raposa </p>
+                <p class="texto"> causando devastação na vila.</p>
+                <p class="texto">Ocasionando na morte do 4° Hokage</p>
+                </div>
         </details>
 
         <details>
@@ -133,6 +183,7 @@
                 <p>Nagato mais conhecido como Pain invade Konoha com a ajuda de seus 6 caminhos e de Konan e usa a tecnica Shinra Tensei o que causa a destruição completa de Konoha</p>
         </details>    
     </details>
+    </div>
     </main>
     
 </body>
