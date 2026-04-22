@@ -4,186 +4,277 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Konoha</title>
-    <style>
-        main {
-            display: flex;
-            gap: 10%;
-        }
-        header{
-            height: 240px;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: rgb(165, 42, 42);
-            display: flex;
-            text-align: center;
-        }
-        .fotologo{
-            height: 225px;
-            width: 225px;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMKP4ZwJkjC9aeYvc1ontDojKNoyGdcYL4Ng&s");
-            border-radius: 50%;
-            margin-left: 10px;
-        }
-        .titulo{
-            height: 100px;
-            width: 50%;
-            text-align: center;
-            margin-left: 100px;
-        }
-        h1{
-            font-size: 60px;
-        }
-        summary h2 {
-            display: inline;
-            margin: 0;
-        }
-        .fotologo2{
-            height: 225px;
-            width: 225px;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMKP4ZwJkjC9aeYvc1ontDojKNoyGdcYL4Ng&s");
-            border-radius: 50%;
-            margin-left: 20%;
-        }
-        .pergaminho{
-            height: 300px;
-            width: 535px;
-            background-image: url('https://tse2.mm.bing.net/th/id/OIP.FyhnbeTOLKLuYtAbh4ITgQHaHJ?rs=1&pid=ImgDetMain&o=7&rm=3');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-size: contain;
-        }
-        .texto{
-            text-align: center;
-        }
-                .sobrenos {
-            height: 30%;
-            width: 30%;
-            margin-left: 8%;
-            overflow-wrap: break-word;
-        }
-        
-        .detetives {
- width: 30%;
+<!DOCTYPE html>
+
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Konoha</title>
+
+```
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    main {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    /* HEADER */
+    header{
+        height: 240px;
+        width: 100%;
+        background-color: brown;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .fotologo, .fotologo2{
+        height: 200px;
+        width: 200px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMKP4ZwJkjC9aeYvc1ontDojKNoyGdcYL4Ng&s");
+        background-size: cover;
+        border-radius: 50%;
+        margin: 10px;
+    }
+
+    .titulo{
+        text-align: center;
+        flex: 1;
+    }
+
+    h1{
+        font-size: 50px;
+        margin: 0;
+    }
+
+    /* COLUNAS */
+    .sobrenos, .casos {
+        width: 30%;
+    }
+
+    /* DETAILS PADRÃO */
+    details {
+        background: rgba(0,0,0,0.7);
+        color: orange;
+        border: 2px solid orange;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    summary {
+        cursor: pointer;
+        list-style: none;
+    }
+
+    summary h2 {
+        display: inline;
+    }
+
+    /* PERGAMINHO */
+    .detetives {
+    width: 30%;
+    max-width: 400px;
+}
+
+/* TOPO (enrolado de cima) */
+.topo {
+    height: 70px;
+    background: linear-gradient(#d2a679, #a67c52);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 4px solid #5c3b1e;
+}
+
+/* MEIO (corpo do pergaminho) */
+.conteudo {
+    background: #f5deb3;
     padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border-left: 4px solid #5c3b1e;
+    border-right: 4px solid #5c3b1e;
+}
 
-    background-image: url('https://www.nicepng.com/png/full/419-4199514_alterar-exibio-de-spoiler-para-tipo-pergaminho-naruto.png');
-    background-repeat: no-repeat;
-    background-size: 100%  
-      }
-        
-        .casos {
-            height: 30%;
-            width: 30%;
-            overflow-wrap: break-word;
-        }
-        .corte {
-            width: 300px;
-            height: 200px; 
-            overflow: hidden;
-            }
-    </style>
+/* BASE (enrolado de baixo) */
+.base {
+    height: 70px;
+    background: linear-gradient(#a67c52, #d2a679);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top: 4px solid #5c3b1e;
+}
+
+    /* BOTÕES */
+    button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background: black;
+        color: orange;
+    }
+
+    button:hover {
+        box-shadow: 0 0 10px orange;
+    }
+
+    /* CONTEÚDO HOKAGE */
+    #conteudo-hokage {
+        margin-top: 20px;
+        animation: aparecer 0.3s ease;
+    }
+
+    @keyframes aparecer {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* IMAGENS DOS CASOS */
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+</style>
+```
+
 </head>
+
 <body>
-    <header>
-        <div class="fotologo"></div>
-        <div class="titulo">
-            <h1>Agência Konoha</h1>
-        </div>
-        <div class="fotologo2"></div>
-    </header>
 
-     <main>
-        <div class="sobrenos">
-        <details>
-            <summary><h2>Sobre Nós</h2></summary>
-                <p>Somos uma agência de detetives de konoha especializados em investigações discretas e soluções eficientes para seus problemas. Oferecemos serviços personalizados para cada caso.</p>
-        </details>
-        </div>
-        <div class="detetives">
-            <details>
-                <summary><h2>Detetives</h2></summary>
-                <details>
-                <summary>Detetive 1°</summary><h4>Hashirama Senju</h4>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4F7gt_m7p325a36wIvh3G7VNLzrmN66ybZc7qvBveLMIgFy3oKJ6lNjj6uk7i7xjCxIexTTaxO2aqlmLJibAefJvxMtLIf4NuRpLo9CvAQ&s=10">
-                <p>Especializado em resolver casos complexos com empatia e inteligência. Usando sua habilidade de controlar madeira (Mokuton), ele captura pistas e impede fugas. Sempre calmo e estratégico, busca a verdade e restaura a paz com eficiência.</p>
-                </details>
+<header>
+    <div class="fotologo"></div>
 
-                <details>
-                <summary>Detetive 2°</summary><h4>Tobirama Senju</h4>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGchk3sG6D-x_hV0hwIurovmg3DwrFz8aZCO1EGf53uYbIOCAhPRbIudIQ1ZtLqIyBeELQVYlFldZJR_El-3euw45mFavpdPfFr3o_d01IAw&s=10">
-                <p>Com uma mente estratégica e uma abordagem direta, ele resolve casos com precisão e rapidez. Sua habilidade de análise aguçada e sua expertise em táticas fazem dele o melhor em desmascarar mentiras e descobrir a verdade. Se a situação exige ação rápida e decisões certeiras, Tobirama é o profissional que você quer.</p>
-                </details>
+```
+<div class="titulo">
+    <h1>Agência Konoha</h1>
+</div>
 
-                <details>
-                <summary>Detetive 3°</summary><h4>Hiruzen Sarutobi</h4>
-                <img src="https://static.wikia.nocookie.net/dublagem/images/e/e4/Hiruzen_Sarutobi.png/revision/latest/thumbnail/width/360/height/360?cb=20210629181453&path-prefix=pt-br">
-                <p>Experiente, observador e estrategista, ele analisa cada detalhe antes de agir, sempre um passo à frente dos outros. Na agência, é conhecido por resolver casos que parecem impossíveis, usando inteligência, calma e uma leitura quase perfeita das pessoas. Onde há mistério, ele encontra a verdade.</p>
-                </details>
+<div class="fotologo2"></div>
+```
 
-                <details>
-                <summary>Detetive 4°</summary><h4>Minato Namizake</h4>
-                <img src="https://static.wikia.nocookie.net/dublagem/images/8/8d/Minato_Namikaze_%28Shippuden%29.png/revision/latest/thumbnail/width/360/height/360?cb=20241120180700&path-prefix=pt-br">
-                <p>Conhecido por sua mente brilhante e reflexos quase instantâneos, ele resolve casos antes mesmo que outros entendam o problema. Frio, estratégico e extremamente eficiente, Minato combina inteligência com ação, chegando sempre primeiro — e saindo com a solução.</p>
-                </details>
+</header>
 
-                <details>
-                <summary>Detetive 5°</summary><h4>Tsunade Senju</h4>
-                <img src="https://static.wikia.nocookie.net/beautybydaysi/images/4/47/Tsunade_%28Naruto%29.png/revision/latest/thumbnail/width/360/height/360?cb=20220926111953">
-                <p>Direta e nada paciente com erros, ela resolve casos com inteligência prática e uma leitura precisa das situações. Na agência, é conhecida por encarar qualquer problema de frente — e sair com a resposta, custe o que custar.</p>
-                </details>
+<main>
 
-                <details>
-                <summary>Detetive 6°</summary><h4>Kakashi Hatake</h4>
-                <img src="https://static.wikia.nocookie.net/dublagem/images/6/63/Kakashi_Hatake_%28NS%29.png/revision/latest/scale-to-width/360?cb=20250323145936&path-prefix=pt-br">
-                <p>Sempre calmo e aparentemente despreocupado, ele observa tudo ao redor com atenção extrema. Especialista em analisar padrões e antecipar movimentos, resolve casos com inteligência silenciosa — quando percebe, ele já descobriu tudo antes de qualquer um.</p>
-                </details>
-
-                <details>
-                <summary>Detetive 7°</summary><h4>Naruto Uzumaki</h4>
-                <img src="https://static.wikia.nocookie.net/narutofanon/images/c/c9/Naruto_Uzumaki_2.jpg/revision/latest/thumbnail/width/360/height/360?cb=20210226154514&path-prefix=pt-br">
-                <p>Pode não seguir métodos tradicionais, mas sua determinação e intuição fazem ele resolver casos que ninguém mais consegue. Persistente e cheio de energia, Naruto nunca desiste — e sempre encontra um jeito de chegar à verdade, mesmo pelos caminhos mais inesperados.</p>
-                </details>
-
-                <details>
-                <summary>Detetive 8°</summary><h4>Shikamaru Nara</h4>
-                <img src="https://cdn.myanimelist.net/r/360x360/images/characters/3/131315.jpg?s=9530d6913654a21fbe84c2b657750b61">
-                <p>Mesmo achando tudo “problemático”, sua inteligência fora do comum permite prever cada passo dos casos com precisão absurda. Preguiçoso na aparência, mas brilhante na prática, ele resolve mistérios com estratégia pura — antes que alguém perceba o que está acontecendo.</p>
-                </details>
-        </details>
-        </div>
-        <div class="casos">
-        <details>
-            
-            <summary><h2>Casos</h2></summary>
-
-        <details>
-            <summary><b>1° Ataque da raposa de nove caudas</b></summary>
-                <div class="pergaminho">
-                    <br><br><br><br>
-                <p class="texto">Esse incidente ocorreu sobre um invasor, </p>
-                <p class="texto">que soltou a raposa </p>
-                <p class="texto"> causando devastação na vila.</p>
-                <p class="texto">Ocasionando na morte do 4° Hokage</p>
-                </div>
-        </details>
-
-        <details>
-            <summary><b>2° Massacre do Clã Uchiha</b></summary>
-                <p>Planejado por Danzo Shimura e executado por Itachi Uchiha, este caso ocorreu para evitar um golpe de estado que os Uchiha planejavam após serem isolados e culpados pelo ataque da Nove Caudas.</p>
-        </details>
-        
-        <details>
-            <summary><b>3° Invasão do Orochimaru</b></summary>
-                <p>Durante o Exame Chunin, Orochimaru alia-se à Vila da Areia e invade Konoha, resultando na morte do 3° Hokage</p>
-        </details>
-
-        <details>
-            <summary><b>4° Invasão de Pain</b></summary>
-                <p>Nagato mais conhecido como Pain invade Konoha com a ajuda de seus 6 caminhos e de Konan e usa a tecnica Shinra Tensei o que causa a destruição completa de Konoha</p>
-        </details>    
+```
+<!-- SOBRE NÓS -->
+<div class="sobrenos">
+    <details>
+        <summary><h2>Sobre Nós</h2></summary>
+        <p>Somos uma agência de detetives de Konoha especializados em investigações discretas e soluções eficientes.</p>
     </details>
+</div>
+
+<!-- DETETIVES (AGORA PERGAMINHO) -->
+<div class="detetives">
+
+    <div class="topo"></div>
+
+    <div class="conteudo">
+
+        <h2>Hokages</h2>
+
+        <button onclick="abrir('hashirama')">Hashirama</button>
+        <button onclick="abrir('tobirama')">Tobirama</button>
+        <button onclick="abrir('hiruzen')">Hiruzen</button>
+        <button onclick="abrir('minato')">Minato</button>
+        <button onclick="abrir('tsunade')">Tsunade</button>
+        <button onclick="abrir('kakashi')">Kakashi</button>
+        <button onclick="abrir('naruto')">Naruto</button>
+        <button onclick="abrir('shikamaru')">Shikamaru</button>
+
+        <div id="conteudo-hokage"></div>
+
     </div>
+
+    <div class="base"></div>
+
+</div>
+
+<!-- CASOS -->
+<div class="casos">
+    <details>
+        <summary><h2>Casos</h2></summary>
+
+        <details>
+            <summary><b>Ataque da Nove Caudas</b></summary>
+            <p>Evento que causou grande destruição em Konoha e levou à morte do 4° Hokage.</p>
+        </details>
+
+        <details>
+            <summary><b>Massacre Uchiha</b></summary>
+            <p>Executado por Itachi para evitar um golpe de estado.</p>
+        </details>
+
+        <details>
+            <summary><b>Invasão de Orochimaru</b></summary>
+            <p>Durante o exame Chunin, resultou na morte do 3° Hokage.</p>
+        </details>
+
+        <details>
+            <summary><b>Invasão de Pain</b></summary>
+            <p>Destruição total de Konoha com Shinra Tensei.</p>
+        </details>
+
+    </details>
+</div>
+```
+
+</main>
+
+<script>
+function abrir(hokage) {
+    let c = document.getElementById("conteudo-hokage");
+
+    if (hokage === "hashirama") {
+        c.innerHTML = "<h3>Hashirama Senju</h3><p>Primeiro Hokage. Mestre do Mokuton.</p>";
+    }
+
+    if (hokage === "tobirama") {
+        c.innerHTML = "<h3>Tobirama Senju</h3><p>Segundo Hokage. Criador de jutsus.</p>";
+    }
+
+    if (hokage === "hiruzen") {
+        c.innerHTML = "<h3>Hiruzen Sarutobi</h3><p>Terceiro Hokage. O Professor.</p>";
+    }
+
+    if (hokage === "minato") {
+        c.innerHTML = "<h3>Minato Namikaze</h3><p>Quarto Hokage. O mais rápido.</p>";
+    }
+
+    if (hokage === "tsunade") {
+        c.innerHTML = "<h3>Tsunade</h3><p>Quinta Hokage. Força e medicina.</p>";
+    }
+
+    if (hokage === "kakashi") {
+        c.innerHTML = "<h3>Kakashi Hatake</h3><p>Sexto Hokage. Ninja copiador.</p>";
+    }
+
+    if (hokage === "naruto") {
+        c.innerHTML = "<h3>Naruto Uzumaki</h3><p>Sétimo Hokage. Determinação máxima.</p>";
+    }
+
+    if (hokage === "shikamaru") {
+        c.innerHTML = "<h3>Shikamaru Nara</h3><p>Oitavo Hokage. Gênio estratégico.</p>";
+    }
+}
+</script>
+
+</body>
+</html>
+
     </main>
     
 </body>
